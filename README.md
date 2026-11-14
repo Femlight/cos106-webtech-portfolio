@@ -164,7 +164,7 @@ Open the generated Vercel domain. The root URL should display the homepage.
 Because the HTML pages are organized inside `pages/`, the homepage URL is:
 
 ```text
-https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/pages/index.html
+https://cos106-webtech-portfolio.vercel.app/
 ```
 
 ## Technologies
