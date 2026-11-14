@@ -140,7 +140,21 @@ Stop the server with `Ctrl+C`.
 
 This is a static website and can be hosted on GitHub Pages, Netlify, or Vercel.
 
-For GitHub Pages:
+The included [`vercel.json`](vercel.json) file routes the Vercel root URL to
+`pages/index.html`, so the homepage works even though the HTML files are
+organized inside the `pages/` folder.
+
+### Vercel
+
+1. Import the project repository into Vercel.
+2. Keep the framework preset as **Other**.
+3. Leave the build command empty.
+4. Leave the output directory empty.
+5. Deploy the project.
+
+Open the generated Vercel domain. The root URL should display the homepage.
+
+### GitHub Pages
 
 1. Push the project to a GitHub repository.
 2. Open **Settings > Pages**.
