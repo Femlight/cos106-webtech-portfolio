@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Joseph Aretola - Showcasing production applications, fintech systems, and web tools for COS 106 Term Project." />
+  <meta name="author" content="Joseph Aretola" />
+  <title>Projects Showcase | Joseph Aretola - COS 106 Portfolio</title>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=4" />
+  <link rel="icon" type="image/jpeg" href="../assets/images/student-profile.jpg?v=1" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Header & Navigation
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="Joseph Aretola Portfolio Home">
+        <img src="../assets/images/student-profile.jpg?v=1" alt="Joseph Aretola" width="38" height="38" />
+        <span class="brand-text">
+          <span class="brand-title">Joseph Aretola</span>
+          <span class="brand-subtitle">COS 106 Scholar</span>
+        </span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        type="button" 
+        class="nav-toggle" 
+        id="navToggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false" 
+        aria-controls="navMenu"
+      >
+        <span class="hamburger-icon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Main Content
+       ========================================================================= -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Page Header -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">Featured Software Projects</h1>
+          <p class="section-description">
+            Explore a selection of production-grade systems, collaboration suites, and web applications developed with modern technologies.
+          </p>
+        </div>
+
+        <!-- Interactive Category Filter Tabs (JavaScript-driven) -->
+        <div class="project-filters" role="group" aria-label="Filter Projects by Category">
+          <button type="button" class="filter-btn active" data-filter="all">All Projects (4)</button>
+          <button type="button" class="filter-btn" data-filter="collaboration">Collaboration &amp; Messaging</button>
+          <button type="button" class="filter-btn" data-filter="fintech">Event Tech &amp; Fintech</button>
+          <button type="button" class="filter-btn" data-filter="web">Web &amp; Academic</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid Section -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="projects-grid">
+
+          <!-- Project 1: Ration Collaboration Platform -->
+          <article class="project-card" data-category="collaboration">
+            <figure class="project-figure">
+              <img 
+                src="../assets/images/project1.svg" 
+                alt="Ration Desktop and Web Collaboration Platform Interface Mockup" 
+                class="project-img" 
+                loading="lazy"
+              />
+              <figcaption class="sr-only" style="display:none;">Ration Messaging &amp; Collaboration Platform</figcaption>
+            </figure>
+            <div class="project-body">
+              <span class="project-category">Desktop &amp; Web Collaboration</span>
+              <h2 class="project-title">Ration Workspace Suite</h2>
+              <p class="project-desc">
+                An all-in-one messaging and enterprise collaboration platform delivering reliable email synchronization, 
+                real-time team chat, calendar scheduling, contact management, and virtual video conferencing solutions for businesses.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tag-item">Dart</li>
+                <li class="tag-item">Flutter Desktop</li>
+                <li class="tag-item">BLoC Pattern</li>
+                <li class="tag-item">RESTful APIs</li>
+                <li class="tag-item">WebRTC</li>
+              </ul>
+              <div class="project-footer">
+                <a href="https://www.ration.works/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Live Showcase &rarr;
+                </a>
+                <a href="https://github.com/Femlight" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Ogun Digital Summit App -->
+          <article class="project-card" data-category="fintech">
+            <figure class="project-figure">
+              <img 
+                src="../assets/images/project2.svg?v=2" 
+                alt="Ogun Digital Summit Official Mobile Event App on Google Play Store" 
+                class="project-img" 
+                loading="lazy"
+              />
+              <figcaption class="sr-only" style="display:none;">Ogun Digital Summit Mobile App</figcaption>
+            </figure>
+            <div class="project-body">
+              <span class="project-category">Event Tech &amp; Community Platform</span>
+              <h2 class="project-title">Ogun Digital Summit App</h2>
+              <p class="project-desc">
+                Official mobile companion app for the Ogun Digital Summit (ODS) — Nigeria's premier technology and 
+                innovation conference. Features live schedules, QR badge check-in, real-time push notifications, 
+                speaker profiles, and venue navigation for 6,000+ annual delegates.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tag-item">Flutter</li>
+                <li class="tag-item">Dart</li>
+                <li class="tag-item">REST APIs</li>
+                <li class="tag-item">Push Notifications</li>
+                <li class="tag-item">Google Play Store</li>
+              </ul>
+              <div class="project-footer">
+                <a href="https://play.google.com/store/apps/details?id=com.ods.ogun_digital_summit" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Google Play &rarr;
+                </a>
+                <a href="https://www.ogundigitalsummit.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  Visit Website
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Polaris Ace & Rainbow App -->
+          <article class="project-card" data-category="fintech">
+            <figure class="project-figure">
+              <img 
+                src="../assets/images/project3.svg" 
+                alt="Polaris Ace Golf Tournament and Commercial Banking App Interface" 
+                class="project-img" 
+                loading="lazy"
+              />
+              <figcaption class="sr-only" style="display:none;">Polaris Ace Digital Banking &amp; Sports App</figcaption>
+            </figure>
+            <div class="project-body">
+              <span class="project-category">Enterprise Banking &amp; Sports</span>
+              <h2 class="project-title">Polaris Ace Golf &amp; Banking</h2>
+              <p class="project-desc">
+                Engineered for Polaris Bank Ltd., a premier mobile portal for Nigerian golfers featuring tournament creation, 
+                course search, live news feeds, and third-party Wakanow API travel &amp; hotel reservations.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tag-item">Mobile Banking</li>
+                <li class="tag-item">Wakanow API</li>
+                <li class="tag-item">Provider State</li>
+                <li class="tag-item">Google Play Store</li>
+                <li class="tag-item">Apple App Store</li>
+              </ul>
+              <div class="project-footer">
+                <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Google Play &rarr;
+                </a>
+                <a href="https://apple.com/app-store" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  Apple App Store
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: CampusConnect & AlgoLens Web Suite -->
+          <article class="project-card" data-category="web">
+            <figure class="project-figure">
+              <img 
+                src="../assets/images/project4.svg" 
+                alt="AlgoLens Sorting Algorithm Visualizer and Academic Portal Web App" 
+                class="project-img" 
+                loading="lazy"
+              />
+              <figcaption class="sr-only" style="display:none;">AlgoLens Web Visualizer</figcaption>
+            </figure>
+            <div class="project-body">
+              <span class="project-category">Web Technologies &amp; Algorithms</span>
+              <h2 class="project-title">AlgoLens &amp; Academic Hub</h2>
+              <p class="project-desc">
+                An interactive web-based data structures and algorithm visualizer developed as part of academic research. 
+                Renders step-by-step QuickSort, MergeSort, and Binary Search animations with runtime complexity metrics.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tag-item">HTML5 Semantic</li>
+                <li class="tag-item">CSS Grid / Flexbox</li>
+                <li class="tag-item">JavaScript ES6+</li>
+                <li class="tag-item">DOM Animation</li>
+                <li class="tag-item">Canvas API</li>
+              </ul>
+              <div class="project-footer">
+                <a href="planner.html" class="btn btn-primary btn-sm">
+                  Live Planner &rarr;
+                </a>
+                <a href="https://github.com/Femlight" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Multimedia Demonstration Video Section (Satisfies Video Multimedia Requirement) -->
+    <section class="section" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Project Video Walkthrough &amp; Showcase</h2>
+          <p class="section-description">
+            Watch an interactive demonstration of software engineering workflows, responsive UI design, and features.
+          </p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+          <div class="video-container">
+            <video 
+              controls 
+              preload="metadata" 
+              poster="../assets/images/video-poster.svg"
+              aria-label="Video Walkthrough of Joseph Aretola Web Portfolio Projects"
+            >
+              <source src="../assets/media/demo-video.mp4" type="video/mp4" />
+              <p>Your browser does not support HTML5 video. Please download the video to watch it.</p>
+            </video>
+          </div>
+          <div class="media-caption" style="margin-top: 0.75rem;">
+            <span>Project Video Walkthrough &bull; Formatted for HTML5 Playback</span>
+            <span>HD 1080p &bull; Interactive Controls</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       3. Footer
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Joseph Aretola</h3>
+          <p>
+            COS 106 – Introduction to Web Technologies Practical Term Project. 
+            Demonstrating proficiency in semantic HTML, responsive CSS, and dynamic JavaScript.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://github.com/Femlight" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/aretolajoseph" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Academic</h4>
+          <ul class="footer-links">
+            <li><span>Course: COS 106 (Introduction to Web Technologies)</span></li>
+            <li><span>Level: 100 Level</span></li>
+            <li><span>Department: Software Engineering</span></li>
+            <li><span>Faculty: Science &amp; Tech</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Get in Touch</h4>
+          <ul class="footer-links">
+            <li><span>📍 Lagos, Nigeria</span></li>
+            <li><span>📞 +234 813 714 0937</span></li>
+            <li><span>✉️ j.aretola6883@miva.edu.ng</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Joseph Aretola. All Rights Reserved. COS 106 Practical Term Project.</p>
+        <a href="#mainContent" class="back-to-top">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/core/main.js"></script>
+  <script src="../js/pages/projects.js"></script>
+</body>
+</html>

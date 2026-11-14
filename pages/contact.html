@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Joseph Aretola - Send inquiries, project collaborations, or academic feedback. COS 106 Term Project." />
+  <meta name="author" content="Joseph Aretola" />
+  <title>Contact Me | Joseph Aretola - COS 106 Portfolio</title>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=4" />
+  <link rel="icon" type="image/jpeg" href="../assets/images/student-profile.jpg?v=1" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Header & Navigation
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="Joseph Aretola Portfolio Home">
+        <img src="../assets/images/student-profile.jpg?v=1" alt="Joseph Aretola" width="38" height="38" />
+        <span class="brand-text">
+          <span class="brand-title">Joseph Aretola</span>
+          <span class="brand-subtitle">COS 106 Scholar</span>
+        </span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        type="button" 
+        class="nav-toggle" 
+        id="navToggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false" 
+        aria-controls="navMenu"
+      >
+        <span class="hamburger-icon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Main Content
+       ========================================================================= -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Page Header -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">Get in Touch With Joseph</h1>
+          <p class="section-description">
+            Have a question regarding COS 106 coursework, software collaboration, or technical speaking? Leave a message below.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form & Info Grid -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Left Column: Contact Details Card -->
+          <aside class="contact-info-card">
+            <h2>Let's Connect</h2>
+            <p>
+              I am always glad to connect with fellow software engineering students, academic faculty, 
+              and technology industry professionals.
+            </p>
+
+            <ul class="contact-info-list" aria-label="Contact Channels">
+              <!-- Location -->
+              <li class="contact-info-item">
+                <span class="item-icon" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Location</strong>
+                  <p style="margin: 0;">Lagos State, Nigeria</p>
+                </div>
+              </li>
+
+              <!-- Phone -->
+              <li class="contact-info-item">
+                <span class="item-icon" aria-hidden="true">📞</span>
+                <div>
+                  <strong>Phone Number</strong>
+                  <p style="margin: 0;"><a href="tel:+2348137140937">+234 813 714 0937</a></p>
+                </div>
+              </li>
+
+              <!-- Email -->
+              <li class="contact-info-item">
+                <span class="item-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <strong>Email Address</strong>
+                  <p style="margin: 0;"><a href="mailto:j.aretola6883@miva.edu.ng">j.aretola6883@miva.edu.ng</a></p>
+                </div>
+              </li>
+
+              <!-- Academic Hours -->
+              <li class="contact-info-item">
+                <span class="item-icon" aria-hidden="true">🕒</span>
+                <div>
+                  <strong>Academic Office Hours</strong>
+                  <p style="margin: 0;">Monday &ndash; Friday: 9:00 AM &ndash; 5:00 PM</p>
+                </div>
+              </li>
+            </ul>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 1.5rem;">
+              <h3 style="font-size: 1rem; margin-bottom: 0.75rem;">Verified Academic Links</h3>
+              <p style="font-size: 0.85rem; margin-bottom: 1rem;">
+                Explore verified project repositories, commits, and professional connections.
+              </p>
+              <div class="btn-group">
+                <a href="https://github.com/Femlight" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color: #ffffff; border-color: #ffffff; padding: 0.5rem 1rem; font-size: 0.85rem;">
+                  GitHub Profile
+                </a>
+                <a href="https://www.linkedin.com/in/aretolajoseph" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color: #ffffff; border-color: #ffffff; padding: 0.5rem 1rem; font-size: 0.85rem;">
+                  LinkedIn Profile
+                </a>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right Column: Validated Contact Form -->
+          <div class="contact-form-container">
+            <h2 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Send a Direct Message</h2>
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.75rem;">
+              All fields marked with an asterisk (*) are required.
+            </p>
+
+            <!-- Success Alert Banner -->
+            <div id="alertSuccess" class="alert-box alert-success" role="alert">
+              <span id="successSummary"></span>
+            </div>
+
+            <!-- Error Summary Banner -->
+            <div id="alertDanger" class="alert-box alert-danger" role="alert"></div>
+
+            <!-- Form Element -->
+            <form id="contactForm" action="https://formsubmit.co/j.aretola6883@miva.edu.ng" method="post" novalidate aria-label="Student Inquiry Form">
+              
+              <!-- 1. Full Name -->
+              <div class="form-group">
+                <label for="name">Your Full Name *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  placeholder="e.g., Professor Adebayo or Jane Doe" 
+                  autocomplete="name" 
+                  required 
+                />
+                <small class="error-msg">Full name cannot be empty.</small>
+              </div>
+
+              <!-- 2. Email Address -->
+              <div class="form-group">
+                <label for="email">Your Email Address *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="e.g., name@university.edu" 
+                  autocomplete="email" 
+                  required 
+                />
+                <small class="error-msg">Please enter a valid email format.</small>
+              </div>
+
+              <!-- 3. Phone Number (Digits Only Check) -->
+              <div class="form-group">
+                <label for="phone">Your Phone Number (Digits Only) *</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  placeholder="e.g., 08137140937 (only numbers)" 
+                  autocomplete="tel" 
+                  required 
+                />
+                <small class="error-msg">Phone number must contain only digits (no spaces or letters).</small>
+              </div>
+
+              <!-- Inquiry Subject Category (Bonus enhancement) -->
+              <div class="form-group">
+                <label for="subject">Purpose of Inquiry</label>
+                <select id="subject" name="subject">
+                  <option value="academic">COS 106 Academic Project Inquiry</option>
+                  <option value="collaboration">Software Engineering Collaboration</option>
+                  <option value="ods">Ogun Digital Summit (ODS) Inquiry</option>
+                  <option value="mentorship">Student Mentorship &amp; Collaboration</option>
+                  <option value="general">General Inquiries / Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group" id="otherPurposeGroup" hidden>
+                <label for="otherPurpose">Please specify your purpose *</label>
+                <input
+                  type="text"
+                  id="otherPurpose"
+                  name="otherPurpose"
+                  placeholder="Type your purpose of inquiry"
+                />
+                <small class="error-msg">Please specify your purpose of inquiry.</small>
+              </div>
+
+              <!-- 4. Message -->
+              <div class="form-group">
+                <label for="message">Your Message / Feedback *</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="5" 
+                  placeholder="Write your detailed message here (at least 10 characters)..." 
+                  required
+                ></textarea>
+                <small class="error-msg">Message cannot be empty (min 10 characters).</small>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary" id="btnSubmit" style="width: 100%; padding-block: 0.9rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Send Message
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       3. Footer
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Joseph Aretola</h3>
+          <p>
+            COS 106 – Introduction to Web Technologies Practical Term Project. 
+            Demonstrating proficiency in semantic HTML, responsive CSS, and dynamic JavaScript.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://github.com/Femlight" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/aretolajoseph" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Academic</h4>
+          <ul class="footer-links">
+            <li><span>Course: COS 106 (Introduction to Web Technologies)</span></li>
+            <li><span>Level: 100 Level</span></li>
+            <li><span>Department: Software Engineering</span></li>
+            <li><span>Faculty: Science &amp; Tech</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Get in Touch</h4>
+          <ul class="footer-links">
+            <li><span>📍 Lagos, Nigeria</span></li>
+            <li><span>📞 +234 813 714 0937</span></li>
+            <li><span>✉️ j.aretola6883@miva.edu.ng</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Joseph Aretola. All Rights Reserved. COS 106 Practical Term Project.</p>
+        <a href="#mainContent" class="back-to-top">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/core/main.js"></script>
+  <script src="../js/pages/contact.js?v=2"></script>
+</body>
+</html>

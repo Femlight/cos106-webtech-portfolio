@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Joseph Aretola - Educational background, technical skills, career aspirations, and hobbies. COS 106 Term Project." />
+  <meta name="author" content="Joseph Aretola" />
+  <title>About Me | Joseph Aretola - COS 106 Portfolio</title>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=4" />
+  <link rel="icon" type="image/jpeg" href="../assets/images/student-profile.jpg?v=1" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Header & Navigation
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="Joseph Aretola Portfolio Home">
+        <img src="../assets/images/student-profile.jpg?v=1" alt="Joseph Aretola" width="38" height="38" />
+        <span class="brand-text">
+          <span class="brand-title">Joseph Aretola</span>
+          <span class="brand-subtitle">COS 106 Scholar</span>
+        </span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        type="button" 
+        class="nav-toggle" 
+        id="navToggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false" 
+        aria-controls="navMenu"
+      >
+        <span class="hamburger-icon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About Me</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Main Content
+       ========================================================================= -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Page Title Header -->
+    <section class="section" style="padding-bottom: 1.5rem;">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">About Joseph Aretola</h1>
+          <p class="section-description">
+            Discover my academic journey, software engineering specializations, career ambitions, and personal passions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bio & Professional Overview (Flexbox / Grid) -->
+    <section class="section about-section" style="padding-top: 0;">
+      <div class="container">
+        <div class="hero-grid" style="align-items: start;">
+          <div class="bio-content">
+            <h2>Who I Am</h2>
+            <p>
+              I am a dedicated Software Engineering student and a seasoned software engineer based in Lagos, Nigeria. 
+              Over the past 5+ years, I have specialized in building robust, cross-platform mobile and web applications 
+              across diverse industries including fintech, banking, travel tech, and ride-hailing.
+            </p>
+            <p>
+              As a scholar at <strong>Miva Open University</strong> studying <strong>Software Engineering</strong>, including <strong>COS 106 (Introduction to Web Technologies)</strong>, I have expanded my foundational 
+              knowledge into standard web architectures: semantic document outlines, responsive styling with Flexbox and CSS Grid, 
+              accessible form validation, and interactive JavaScript state management.
+            </p>
+            <p>
+              I take pride in translating complex user requirements into elegant, reliable digital products. From leading 
+              technical teams at the <em>Ogun Digital Summit (ODS)</em> for over 5 consecutive years to engineering enterprise 
+              banking platforms for <em>Polaris Bank Ltd.</em>, I am committed to clean code, test-driven development (TDD), 
+              and user-centric design.
+            </p>
+          </div>
+
+          <aside>
+            <div class="profile-card" style="margin: 0 auto;">
+              <figure class="profile-photo-wrapper">
+                <img 
+                  src="../assets/images/student-profile.jpg" 
+                  alt="Portrait of Joseph Aretola" 
+                  width="380" 
+                  height="380"
+                />
+                <figcaption style="font-size: 0.8rem; text-align: center; color: var(--text-light); margin-top: 0.5rem;">
+                  Joseph Aretola &bull; Lagos, Nigeria
+                </figcaption>
+              </figure>
+              <div class="profile-details">
+                <h3 class="profile-name-tag">Key Student Details</h3>
+                <ul style="list-style: none; padding: 0; margin-top: 0.75rem; text-align: left; font-size: 0.9rem;">
+                  <li style="margin-bottom: 0.4rem;"><strong>Program:</strong> B.Sc. in Software Engineering</li>
+                  <li style="margin-bottom: 0.4rem;"><strong>University:</strong> Miva Open University</li>
+                  <li style="margin-bottom: 0.4rem;"><strong>Matric Number:</strong> 2025/C/SENG/0798</li>
+                  <li style="margin-bottom: 0.4rem;"><strong>Course:</strong> COS 106 (Introduction to Web Technologies)</li>
+                  <li style="margin-bottom: 0.4rem;"><strong>Specialization:</strong> Full-Stack &amp; Flutter</li>
+                  <li style="margin-bottom: 0.4rem;"><strong>GPA:</strong> 4.53 &mdash; 1st Semester</li>
+                  <li style="margin-bottom: 0.4rem;"><strong>Status:</strong> Active Undergraduate</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Educational Background & Academic Table (HTML Tables Requirement) -->
+    <section class="section about-section" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Educational Background &amp; Coursework</h2>
+          <p class="section-description">
+            A comprehensive breakdown of degree qualifications, academic milestones, and semester coursework performance.
+          </p>
+        </div>
+
+        <!-- Degree Summary Card -->
+        <div class="card" style="margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h3>Bachelor of Science (B.Sc.) in Software Engineering</h3>
+              <p style="color: var(--primary); font-weight: 600; margin-bottom: 0.25rem;">
+                Miva Open University
+              </p>
+              <p style="font-size: 0.9rem; color: var(--text-light);">
+                Faculty of Science &amp; Technology &bull; Nigeria
+              </p>
+            </div>
+            <span class="badge badge-success" style="font-size: 0.9rem; padding: 0.35rem 0.85rem;">
+              Class Honors &bull; In Progress
+            </span>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.95rem;">
+            Core curriculum covers Web Technologies, Data Structures &amp; Algorithms, Object-Oriented Software Design, 
+            Relational Database Systems, Operating Systems, Computer Architecture, and Discrete Mathematics.
+          </p>
+        </div>
+
+        <!-- Academic Table (Satisfies HTML Table Requirement with semantic tags) -->
+        <h3 style="margin-bottom: 0.75rem;">Semester Course Record &amp; Academic Performance</h3>
+        <p style="font-size: 0.95rem; margin-bottom: 1rem;">
+          Official Miva Open University transcript — First Semester results with scores, grades, and grade points:
+        </p>
+
+        <div class="academic-table-wrapper">
+          <table class="academic-table" summary="Semester Coursework and Grade Performance">
+            <caption>First Semester Academic Transcript — Miva Open University (Software Engineering)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Course Code</th>
+                <th scope="col">Course Title</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Score</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Grade Point</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: 700; color: var(--primary);">GST 111</td>
+                <td>Communication in English Language I</td>
+                <td>2</td>
+                <td>76</td>
+                <td><strong>A</strong></td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: var(--primary);">GST 125</td>
+                <td>Contemporary Health Issues</td>
+                <td>2</td>
+                <td>73</td>
+                <td><strong>A</strong></td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: var(--primary);">STA 111</td>
+                <td>Descriptive Statistics</td>
+                <td>3</td>
+                <td>72</td>
+                <td><strong>A</strong></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: var(--primary);">MTH 101</td>
+                <td>Elementary Mathematics</td>
+                <td>2</td>
+                <td>56</td>
+                <td><strong>C</strong></td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: var(--primary);">PHY 101</td>
+                <td>General Physics I</td>
+                <td>2</td>
+                <td>55</td>
+                <td><strong>C</strong></td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: var(--primary);">PHY 107</td>
+                <td>General Practical Physics</td>
+                <td>1</td>
+                <td>71</td>
+                <td><strong>A</strong></td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: var(--primary);">COS 101</td>
+                <td>Introduction to Computing</td>
+                <td>3</td>
+                <td>88</td>
+                <td><strong>A</strong></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: var(--primary);">GST 121</td>
+                <td>Use of Library Study Skills and ICT</td>
+                <td>2</td>
+                <td>80</td>
+                <td><strong>A</strong></td>
+                <td>10</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2">First Semester Standing</td>
+                <td><strong>Total Credits: 17</strong></td>
+                <td colspan="2"><strong>GPA: 4.53</strong></td>
+                <td><span class="badge badge-primary">Total Grade Points: 77</span></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- Transcript Screenshot -->
+        <div style="margin-top: 1.5rem; text-align: center;">
+          <figure>
+            <img
+              src="../assets/images/miva-transcript.png"
+              alt="Official Miva Open University First Semester Transcript for Joseph Aretola"
+              style="max-width: 100%; border-radius: 10px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);"
+            />
+            <figcaption style="font-size: 0.8rem; color: var(--text-light); margin-top: 0.6rem;">
+              Official First Semester Academic Transcript &mdash; Miva Open University
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. Technical Skills Section (CSS Grid, Skill Meters, and Unordered Lists) -->
+    <section class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Technical Skills &amp; Proficiencies</h2>
+          <p class="section-description">
+            A comprehensive overview of my programming languages, frameworks, architecture paradigms, and development tools.
+          </p>
+        </div>
+
+        <div class="skills-container">
+          
+          <!-- Category 1: Web & Frontend -->
+          <article class="skill-category-card">
+            <h3 class="skill-category-title">
+              <span aria-hidden="true">🌐</span> Web &amp; Frontend Technologies
+            </h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>HTML5 (Semantic &amp; Accessible)</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 95%;"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>CSS3 (Flexbox, Grid &amp; Animations)</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 92%;"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>JavaScript (ES6+, DOM Manipulation)</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>Responsive Web Design &amp; Mobile First</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 95%;"></div>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Category 2: Mobile & Frameworks -->
+          <article class="skill-category-card">
+            <h3 class="skill-category-title">
+              <span aria-hidden="true">📱</span> Mobile &amp; Cross-Platform
+            </h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>Dart &amp; Flutter Framework</span>
+                  <span>96%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 96%;"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>State Management (BLoC, Provider)</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 92%;"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>Architecture (MVVM, Clean Arch)</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>Test-Driven Development (TDD / Unit Tests)</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 85%;"></div>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Category 3: Databases & Tools -->
+          <article class="skill-category-card">
+            <h3 class="skill-category-title">
+              <span aria-hidden="true">🛠️</span> Databases &amp; Developer Tools
+            </h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>Firebase &amp; Firestore / Cloud Functions</span>
+                  <span>88%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 88%;"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>MySQL, SQLite &amp; MongoDB</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 85%;"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>Git, GitHub, Bitbucket &amp; CI/CD</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 92%;"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span>Agile, Scrum, Jira &amp; ClickUp</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-progress-bar">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Career Aspirations (Ordered Lists Requirement) -->
+    <section class="section about-section" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Career Aspirations &amp; Academic Roadmap</h2>
+          <p class="section-description">
+            My strategic path toward software leadership, advanced computing research, and impactful technology solutions.
+          </p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+          <p>
+            My overarching aspiration is to operate at the intersection of full-stack web engineering and scalable distributed 
+            systems. Having architected fintech and enterprise mobile platforms, my target is to lead engineering teams that solve 
+            critical financial inclusion, educational technology, and productivity challenges across Africa and globally.
+          </p>
+
+          <!-- Ordered List Roadmap (Fulfills HTML Ordered List requirement) -->
+          <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Chronological Career Milestones</h3>
+          <ol class="roadmap-list">
+            <li class="roadmap-item">
+              <h4 class="roadmap-title">Graduate with First-Class Honors in Software Engineering</h4>
+              <p>
+                Complete my B.Sc. with distinguished academic standing, mastering fundamental computing principles, 
+                computational theory, and advanced software development methodologies.
+              </p>
+            </li>
+            <li class="roadmap-item">
+              <h4 class="roadmap-title">Deepen Full-Stack Web &amp; Cloud Architecture</h4>
+              <p>
+                Expand upon frontend web frameworks (React/Next.js) and microservices architecture with Node.js, Go, 
+                and Docker containerization to deliver high-availability distributed systems.
+              </p>
+            </li>
+            <li class="roadmap-item">
+              <h4 class="roadmap-title">Lead Enterprise Engineering Initiatives in African FinTech</h4>
+              <p>
+                Scale payment infrastructures and seamless cross-border financial rails that serve millions of merchants 
+                and underbanked communities across emerging markets.
+              </p>
+            </li>
+            <li class="roadmap-item">
+              <h4 class="roadmap-title">Mentor &amp; Empower the Next Generation of Engineers</h4>
+              <p>
+                Expand community-driven technical summits like the <em>Ogun Digital Summit</em>, establishing tech incubation 
+                programs, open-source workshops, and student mentorship labs.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Hobbies and Interests -->
+    <section class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Hobbies &amp; Personal Interests</h2>
+          <p class="section-description">
+            Activities that inspire creativity, strategic thinking, and balanced personal wellness beyond code.
+          </p>
+        </div>
+
+        <div class="hobby-grid">
+          <div class="hobby-card">
+            <span class="hobby-emoji" aria-hidden="true">🎤</span>
+            <div>
+              <h4 style="margin-bottom: 0.2rem;">Community Volunteering</h4>
+              <p style="font-size: 0.85rem; margin: 0;">Lead developer for Ogun Digital Summit (6,000+ attendees).</p>
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <span class="hobby-emoji" aria-hidden="true">♟️</span>
+            <div>
+              <h4 style="margin-bottom: 0.2rem;">Chess &amp; Strategy</h4>
+              <p style="font-size: 0.85rem; margin: 0;">Analyzing tactical endgames and combinatorial problem solving.</p>
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <span class="hobby-emoji" aria-hidden="true">✍️</span>
+            <div>
+              <h4 style="margin-bottom: 0.2rem;">Technical Writing</h4>
+              <p style="font-size: 0.85rem; margin: 0;">Authoring articles on clean architecture, state management, and TDD.</p>
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <span class="hobby-emoji" aria-hidden="true">📸</span>
+            <div>
+              <h4 style="margin-bottom: 0.2rem;">Digital Photography</h4>
+              <p style="font-size: 0.85rem; margin: 0;">Capturing urban street life, tech conference moments, and visual symmetry.</p>
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <span class="hobby-emoji" aria-hidden="true">🎧</span>
+            <div>
+              <h4 style="margin-bottom: 0.2rem;">Tech Podcasts &amp; Audiobooks</h4>
+              <p style="font-size: 0.85rem; margin: 0;">Exploring software engineering radio and startup architecture stories.</p>
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <span class="hobby-emoji" aria-hidden="true">🏃</span>
+            <div>
+              <h4 style="margin-bottom: 0.2rem;">Fitness &amp; Table Tennis</h4>
+              <p style="font-size: 0.85rem; margin: 0;">Staying physically active through cardio running and fast-paced table tennis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       3. Footer
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Joseph Aretola</h3>
+          <p>
+            COS 106 – Introduction to Web Technologies Practical Term Project. 
+            Demonstrating proficiency in semantic HTML, responsive CSS, and dynamic JavaScript.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://github.com/Femlight" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/aretolajoseph" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Academic</h4>
+          <ul class="footer-links">
+            <li><span>Course: COS 106 (Introduction to Web Technologies)</span></li>
+            <li><span>Level: 100 Level</span></li>
+            <li><span>Department: Software Engineering</span></li>
+            <li><span>Faculty: Science &amp; Tech</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Get in Touch</h4>
+          <ul class="footer-links">
+            <li><span>📍 Lagos, Nigeria</span></li>
+            <li><span>📞 +234 813 714 0937</span></li>
+            <li><span>✉️ j.aretola6883@miva.edu.ng</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Joseph Aretola. All Rights Reserved. COS 106 Practical Term Project.</p>
+        <a href="#mainContent" class="back-to-top">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/core/main.js"></script>
+</body>
+</html>

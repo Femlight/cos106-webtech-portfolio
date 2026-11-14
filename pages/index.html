@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="COS 106 Practical Term Project - Academic Portfolio and Student Management Website of Joseph Aretola, Software Engineering student and Software Engineer." />
+  <meta name="author" content="Joseph Aretola" />
+  <title>Joseph Aretola | Academic Portfolio &amp; Student Platform</title>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=4" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="../assets/images/student-profile.jpg?v=1" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Header & Accessible Navigation Menu
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="Joseph Aretola Portfolio Home">
+        <img src="../assets/images/student-profile.jpg?v=1" alt="Joseph Aretola" width="38" height="38" />
+        <span class="brand-text">
+          <span class="brand-title">Joseph Aretola</span>
+          <span class="brand-subtitle">COS 106 Scholar</span>
+        </span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        type="button" 
+        class="nav-toggle" 
+        id="navToggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false" 
+        aria-controls="navMenu"
+      >
+        <span class="hamburger-icon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Main Content
+       ========================================================================= -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Hero Section -->
+    <section class="section hero-section" aria-labelledby="heroTitle">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-content">
+            <h1 class="hero-name" id="heroTitle">
+              Hello, I'm <span class="highlight-text">Joseph Aretola</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Software Engineering Student &amp; Results-Driven Software Engineer
+            </p>
+
+            <!-- Brief Biography -->
+            <p class="hero-bio">
+              Welcome to my official <strong>COS 106 (Introduction to Web Technologies)</strong> term project website. 
+              I am an enthusiastic Software Engineering undergraduate and experienced software engineer with a 
+              passion for architecting high-performance, responsive web platforms and cross-platform applications. 
+              This portal demonstrates modern semantic HTML5, responsive CSS Grid and Flexbox layouts, dynamic JavaScript 
+              interactivity, and an integrated Academic Management system.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+              <a href="projects.html" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                Explore Projects
+              </a>
+              <a href="planner.html" class="btn btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                Academic Planner
+              </a>
+              <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero-stats" role="region" aria-label="Key Highlights">
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Apps &amp; Platforms</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">6,000+</span>
+                <span class="stat-label">Community Impact</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4.0 / 4.0</span>
+                <span class="stat-label">Academic Commitment</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Visual: Student Photograph Card -->
+          <aside class="hero-visual">
+            <div class="profile-card">
+              <figure class="profile-photo-wrapper">
+                <img 
+                  src="../assets/images/student-profile.jpg" 
+                  alt="Photograph of Joseph Aretola, Software Engineering Student and Developer" 
+                  width="400" 
+                  height="400"
+                />
+              </figure>
+              <div class="profile-details">
+                <h2 class="profile-name-tag">Joseph Aretola</h2>
+                <p class="profile-role-tag">B.Sc. Software Engineering Candidate</p>
+                <p class="profile-role-tag">Matric Number: 2025/C/SENG/0798</p>
+                <div class="profile-status">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  <span>Active Student &amp; Open for Collaborations</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Multimedia Welcome Card Section (Fulfills Multimedia Requirement) -->
+    <section class="section" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Welcome Voice Note &amp; Audio Overview</h2>
+          <p class="section-description">
+            Listen to an audio welcome note introducing this semester's web technologies term project.
+          </p>
+        </div>
+
+        <div class="multimedia-card" style="max-width: 720px; margin: 0 auto;">
+          <div class="multimedia-header">
+            <span class="multimedia-icon" aria-hidden="true">🎙️</span>
+            <div>
+              <h3>Student Welcome Note</h3>
+              <p>COS 106 Term Project Audio Briefing (HTML5 Audio Player)</p>
+            </div>
+          </div>
+          
+          <div class="audio-player-wrapper">
+            <audio controls preload="metadata">
+              <source src="../assets/media/joseph-introduction.wav?v=1" type="audio/wav" />
+              Your browser does not support the audio element.
+            </audio>
+            <div class="media-caption">
+              <span>Format: WAV Audio (44.1kHz / 8-bit PCM)</span>
+              <span>Duration: 0:04</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Pillars / Highlights Grid -->
+    <section class="section" aria-labelledby="highlightsTitle">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="highlightsTitle">What This Platform Offers</h2>
+          <p class="section-description">
+            Designed to bridge rigorous academic scholarship with high-standard software engineering practices.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Pillar 1 -->
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🎓</div>
+            <h3 class="card-title">Academic Background</h3>
+            <p class="card-text">
+              Comprehensive overview of my Software Engineering coursework, honors, semester grades, and career goals.
+            </p>
+            <a href="about.html" class="btn btn-outline btn-sm" style="margin-top: 1rem;">View Academic Profile &rarr;</a>
+          </article>
+
+          <!-- Pillar 2 -->
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">💻</div>
+            <h3 class="card-title">Production Projects</h3>
+            <p class="card-text">
+              Real-world software including fintech systems, collaboration suites, travel platforms, and academic web tools.
+            </p>
+            <a href="projects.html" class="btn btn-outline btn-sm" style="margin-top: 1rem;">Explore Projects &rarr;</a>
+          </article>
+
+          <!-- Pillar 3 -->
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📅</div>
+            <h3 class="card-title">Interactive Planner</h3>
+            <p class="card-text">
+              A dynamic JavaScript academic task manager allowing students to add, filter, complete, and track coursework tasks.
+            </p>
+            <a href="planner.html" class="btn btn-outline btn-sm" style="margin-top: 1rem;">Launch Planner &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Call to Action Banner -->
+    <section class="section" style="background-color: var(--primary-dark); color: #ffffff; text-align: center;">
+      <div class="container">
+        <h2 style="color: #ffffff; margin-bottom: 1rem;">Have a Question or Collaboration Idea?</h2>
+        <p style="color: #bfdbfe; max-width: 600px; margin: 0 auto 2rem auto;">
+          Whether you want to discuss university coursework, software architecture, or explore open-source projects, my inbox is always open.
+        </p>
+        <a href="contact.html" class="btn btn-primary" style="background-color: #ffffff; color: var(--primary-dark);">
+          Send a Message
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       3. Footer
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <h3>Joseph Aretola</h3>
+          <p>
+            COS 106 – Introduction to Web Technologies Practical Term Project. 
+            Demonstrating proficiency in semantic HTML, responsive CSS, and dynamic JavaScript.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://github.com/Femlight" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/aretolajoseph" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Academic Info -->
+        <div>
+          <h4 class="footer-heading">Academic</h4>
+          <ul class="footer-links">
+            <li><span>Course: COS 106 (Introduction to Web Technologies)</span></li>
+            <li><span>Level: 100 Level</span></li>
+            <li><span>Department: Software Engineering</span></li>
+            <li><span>Faculty: Science &amp; Tech</span></li>
+          </ul>
+        </div>
+
+        <!-- Contact Quick Info -->
+        <div>
+          <h4 class="footer-heading">Get in Touch</h4>
+          <ul class="footer-links">
+            <li><span>📍 Lagos, Nigeria</span></li>
+            <li><span>📞 +234 813 714 0937</span></li>
+            <li><span>✉️ j.aretola6883@miva.edu.ng</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Joseph Aretola. All Rights Reserved. COS 106 Practical Term Project.</p>
+        <a href="#mainContent" class="back-to-top">
+          Back to Top &uarr;
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/core/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive Academic Planner & Student Task Manager - COS 106 Practical Term Project by Joseph Aretola." />
+  <meta name="author" content="Joseph Aretola" />
+  <title>Academic Planner | Joseph Aretola - COS 106 Portfolio</title>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=4" />
+  <link rel="icon" type="image/jpeg" href="../assets/images/student-profile.jpg?v=1" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Header & Navigation
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="Joseph Aretola Portfolio Home">
+        <img src="../assets/images/student-profile.jpg?v=1" alt="Joseph Aretola" width="38" height="38" />
+        <span class="brand-text">
+          <span class="brand-title">Joseph Aretola</span>
+          <span class="brand-subtitle">COS 106 Scholar</span>
+        </span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        type="button" 
+        class="nav-toggle" 
+        id="navToggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false" 
+        aria-controls="navMenu"
+      >
+        <span class="hamburger-icon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link active">Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Main Content
+       ========================================================================= -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Page Header -->
+    <section class="section" style="padding-bottom: 1.5rem;">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">Academic Management Planner</h1>
+          <p class="section-description">
+            Organize coursework, track project milestones, prioritize study sessions, and monitor academic completion progress in real time.
+          </p>
+        </div>
+
+        <!-- Live Statistics Counter Grid (Dynamic DOM Updates) -->
+        <div class="planner-stats-grid" role="region" aria-label="Coursework Statistics">
+          <div class="planner-stat-card">
+            <div class="planner-stat-icon stat-icon-total" aria-hidden="true">📚</div>
+            <div class="planner-stat-info">
+              <span class="planner-stat-number" id="statTotal">0</span>
+              <span class="planner-stat-label">Total Coursework Tasks</span>
+            </div>
+          </div>
+
+          <div class="planner-stat-card">
+            <div class="planner-stat-icon stat-icon-pending" aria-hidden="true">⏳</div>
+            <div class="planner-stat-info">
+              <span class="planner-stat-number" id="statPending">0</span>
+              <span class="planner-stat-label">Pending / In Progress</span>
+            </div>
+          </div>
+
+          <div class="planner-stat-card">
+            <div class="planner-stat-icon stat-icon-completed" aria-hidden="true">✅</div>
+            <div class="planner-stat-info">
+              <span class="planner-stat-number" id="statCompleted">0</span>
+              <span class="planner-stat-label">Completed Tasks</span>
+            </div>
+          </div>
+
+          <div class="planner-stat-card">
+            <div class="planner-stat-icon stat-icon-rate" aria-hidden="true">📈</div>
+            <div class="planner-stat-info">
+              <span class="planner-stat-number" id="statRate">0%</span>
+              <span class="planner-stat-label">Completion Efficiency</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Planner Interactive Workspace (Two Column Dashboard) -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="planner-dashboard">
+
+          <!-- Left Column: Add Task Form -->
+          <aside class="planner-form-card" aria-labelledby="addTaskHeading">
+            <h2 id="addTaskHeading" style="font-size: 1.3rem; margin-bottom: 0.5rem;">
+              Add Coursework Task
+            </h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              Fill in the academic details below to schedule a new task.
+            </p>
+
+            <form id="taskForm" novalidate>
+              <!-- Task Title -->
+              <div class="form-group">
+                <label for="taskTitle">Task Title / Assignment Name *</label>
+                <input 
+                  type="text" 
+                  id="taskTitle" 
+                  name="taskTitle" 
+                  placeholder="e.g., COS 106 HTML Form Validation" 
+                  required 
+                />
+                <small class="error-msg">Please enter a task title</small>
+              </div>
+
+              <!-- Course Category -->
+              <div class="form-group">
+                <label for="taskCourse">Course Code *</label>
+                <select id="taskCourse" name="taskCourse" required>
+                  <option value="">Select a Course...</option>
+                  <option value="COS 106">COS 106 (Introduction to Web Technologies)</option>
+                  <option value="COS 101">COS 101: Intro to Computer Science</option>
+                  <option value="COS 102">COS 102: Database Systems &amp; SQL</option>
+                  <option value="MAT 102">MAT 102: Linear Algebra</option>
+                  <option value="PHY 102">PHY 102: General Physics</option>
+                  <option value="General Study">General Academic Research</option>
+                </select>
+                <small class="error-msg">Please select or specify a course</small>
+              </div>
+
+              <!-- Due Date -->
+              <div class="form-group">
+                <label for="taskDueDate">Target Completion Date *</label>
+                <input 
+                  type="date" 
+                  id="taskDueDate" 
+                  name="taskDueDate" 
+                  required 
+                />
+                <small class="error-msg">Please pick a due date</small>
+              </div>
+
+              <!-- Priority Level -->
+              <div class="form-group">
+                <label for="taskPriority">Priority Level *</label>
+                <select id="taskPriority" name="taskPriority" required>
+                  <option value="high">🔴 High Priority (Exam / Urgent Submission)</option>
+                  <option value="medium" selected>🟡 Medium Priority (Weekly Assignment)</option>
+                  <option value="low">🟢 Low Priority (Optional Reading / Revision)</option>
+                </select>
+              </div>
+
+              <!-- Notes -->
+              <div class="form-group">
+                <label for="taskNotes">Study Notes / Reference Links (Optional)</label>
+                <textarea 
+                  id="taskNotes" 
+                  name="taskNotes" 
+                  rows="3" 
+                  placeholder="Add textbooks, page numbers, lecture slides, or GitHub repository notes..."
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Add Task to Planner
+              </button>
+            </form>
+          </aside>
+
+          <!-- Right Column: Interactive Tasks View -->
+          <div class="planner-tasks-container">
+            
+            <!-- Tasks Toolbar: Search & Status Filters -->
+            <div class="tasks-toolbar">
+              <!-- Filter Tabs -->
+              <div class="tasks-filter-tabs" role="tablist" aria-label="Task Status Filter">
+                <button type="button" class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
+                  All Tasks
+                </button>
+                <button type="button" class="filter-tab" data-filter="active" role="tab" aria-selected="false">
+                  Active
+                </button>
+                <button type="button" class="filter-tab" data-filter="completed" role="tab" aria-selected="false">
+                  Completed
+                </button>
+              </div>
+
+              <!-- Live Keyword Search -->
+              <div style="flex-grow: 1; max-width: 260px;">
+                <input 
+                  type="text" 
+                  id="taskSearch" 
+                  placeholder="🔍 Search tasks or course..." 
+                  style="width: 100%; padding: 0.45rem 0.85rem; font-size: 0.85rem; border: 1.5px solid var(--border-color); border-radius: var(--radius-md); outline: none;"
+                />
+              </div>
+            </div>
+
+            <!-- Task List Container (Populated dynamically via JavaScript) -->
+            <ul class="task-list" id="taskList" aria-label="Academic Task List">
+              <!-- Dynamic task items inserted here by js/pages/planner.js -->
+            </ul>
+
+            <!-- Empty State Graphic -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+              <div class="empty-state-icon" aria-hidden="true">📝</div>
+              <h3>No Academic Tasks Found</h3>
+              <p>You have no tasks matching the selected filter criteria. Add a task using the form on the left!</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       3. Footer
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Joseph Aretola</h3>
+          <p>
+            COS 106 – Introduction to Web Technologies Practical Term Project. 
+            Demonstrating proficiency in semantic HTML, responsive CSS, and dynamic JavaScript.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://github.com/Femlight" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/aretolajoseph" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Academic</h4>
+          <ul class="footer-links">
+            <li><span>Course: COS 106 (Introduction to Web Technologies)</span></li>
+            <li><span>Level: 100 Level</span></li>
+            <li><span>Department: Software Engineering</span></li>
+            <li><span>Faculty: Science &amp; Tech</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Get in Touch</h4>
+          <ul class="footer-links">
+            <li><span>📍 Lagos, Nigeria</span></li>
+            <li><span>📞 +234 813 714 0937</span></li>
+            <li><span>✉️ j.aretola6883@miva.edu.ng</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Joseph Aretola. All Rights Reserved. COS 106 Practical Term Project.</p>
+        <a href="#mainContent" class="back-to-top">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/core/main.js"></script>
+  <script src="../js/pages/planner.js"></script>
+</body>
+</html>
